@@ -1,0 +1,95 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk 🔃",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex",
+        "dvipdfmx"
+      ]
+    },
+    {
+      "name": "platex*2 -> dvipdfmx",
+      "tools": [
+        "platex",
+        "platex",
+        "dvipdfmx"
+      ]
+    }
+  ],
+    "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-kanji=utf8",
+        "-shell-escape",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "platex",
+      "command": "platex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-kanji=utf8",
+        "-shell-escape",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "-kanji=utf8",
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": [
+        "%DOCFILE%.dvi"
+      ]
+    }
+  ],
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "window.zoomLevel": -1
+}
